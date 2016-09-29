@@ -59,7 +59,7 @@ documentation is [here](https://hub.docker.com/_/nginx/).
 You can run docker containers in two different modes:
 Here, we specified (with option -d) that we'd like to run nginx in **detached mode**. This means that it runs in the background and we do not see 
 the stdout of the container.
-The alternative is to run in interactive mode and allocating a text terminal (with options -it). This way you can see the stdout. Pressing ctrl+C will stop it.
+The alternative is to run in **interactive mode** and allocating a text terminal (with options -it). This way you can see the stdout. Pressing ctrl+C will stop it.
 To see stdout of detached containers, use `docker logs`: `docker logs mynginx`
 
 **List containers:**
