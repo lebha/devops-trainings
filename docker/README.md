@@ -20,7 +20,7 @@ A docker container is an instance of an image. When you run a container you basi
 
 Docker consists of two components, client and server. Typical aliases for server are engine and daemon, but they all mean the same.
 Docker works differently on different operating systems. On linux, docker server and client both run in localhost. On Mac OS X and Windows
-doccer client runs on localhost but you must create a virtual machine for the server. For this, we are going to use docker-machine.
+docker client runs on localhost but you must create a virtual machine for the server. For this, we are going to use docker-machine.
 
 ## Docker Machine Guide
 
