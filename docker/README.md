@@ -143,7 +143,12 @@ docker run -d --name mynginx -p 80:80 -v $(pwd)/index.html:/usr/share/nginx/html
 We mount our index page into the official nginx container at runtime. The mount is read only (ro), so the container may not modify the file. Use
 read write (rw) to give container write permissions on mounts. Mount sources only accept absolute paths.
 
-##Mounting docker socket
+## Mounting docker socket
+
+Is known in web as Docker outside of Docker (DooD).
+Alternatively, it is possible to run docker daemon in docker (DinD), but it's hasardous and can cause data corruption.
+
+
 In very advanced setup, you might want to mount your docker socket. In practice, this means that the container can command docker to create images and sibling containers on the host.
 To try this, make a file jenkins_dockerfile with content:
 ```
@@ -186,4 +191,18 @@ docker rm -f myjenkins
 docker volume ls
 docker volume rm jenkins_home
 ```
+
+## Docker Compose
+
+Docker Compose can be used to launch an entire application of multiple containers at once.
+
+[Docker Compose Instructions](COMPOSE.md)
+
+
+However, the recommended platform for running applications at Elisa is [Kubernetes](http://kubernetes.io/).
+
+
+Kubernetes is part of these trainings: [Training Material](../kubernetes).
+For Kubernetes installation and usage, please check out [Elisa SDC Kubernetes Repository](https://github.devcloud.elisa.fi/sdc/kubernetes)
+
 
