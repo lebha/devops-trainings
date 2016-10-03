@@ -1,36 +1,5 @@
 # Openstack command line example
 
-## Prerequisites
-
-- [Python2.7](https://www.python.org/downloads/)
-
-
-## Recommended
-
-- virtualenv: `pip install virtualenv`
-
-
-## Create Python virtualenv (Optional)
-
-NOTE: Working directory must be the folder where this README is located.
-
-```
-virtualenv venv-clients
-source venv-clients/bin/activate
-```
-
-After the script, virtualenv is activated. To exit virtualenv:
-
-```
-deactivate
-```
-
-## Install OpenStack Python clients
-
-```
-pip install -r requirements.txt
-```
-
 ## Create a network from command line
 
 **Edit** your info into example-openrc.sh **and** source it:
