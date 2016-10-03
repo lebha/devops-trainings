@@ -1,0 +1,4 @@
+python-neutronclient==4.2.0
+python-heatclient==1.2.0
+python-novaclient==3.4.0
+python-openstackclient==2.4.0
