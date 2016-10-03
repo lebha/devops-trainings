@@ -12,8 +12,6 @@ def create(instance_name):
     
     lib = OpenStackLib()
 
-    print lib.list_servers()
-
     nics = [
         {
             'net-id': network_id,
@@ -24,8 +22,7 @@ def create(instance_name):
             ]
         }
     ]
-    print instance_name
-    lib.create_server(name='kala',
+    lib.create_server(name=instance_name,
                       image=lib.get_image_id('phs-centos7-cloudimage-latest'),
                       flavor=lib.get_flavor_id('m1.small'),
                       security_groups=[security_group_id],
@@ -54,13 +51,11 @@ def main():
     if args.list:
         lib = OpenStackLib()
         print lib.list_servers()
-        return
     elif not args.name:
         parser.print_help()
     elif args.delete:
         delete(args.name)
     elif args.create:
-        print repr(args.name)
         create(args.name)
 
 if __name__ == '__main__':
