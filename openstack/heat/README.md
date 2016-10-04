@@ -1,6 +1,13 @@
 # OpenStack Heat Example
 
 ## Create Network and Server with heat
+
+First download your openrc V3 file from [OpenStack](https://api.elisa-sdc.fi/dashboard/project/access_and_security/) and source it:
+
+```
+source my-openrc.sh
+```
+
 1. Set heat stack name, examples: `export OS_STACK_NAME=test-stack`
 2. Generate access keys for the stack:
      - generate new rsa key (or use existing), example: `ssh-keygen -t rsa -b 4096 -N "" -f ${OS_STACK_NAME}.key`

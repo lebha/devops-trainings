@@ -2,10 +2,10 @@
 
 ## Create a network from command line
 
-**Edit** your info into example-openrc.sh **and** source it:
+Download your openrc V3 file from [OpenStack](https://api.elisa-sdc.fi/dashboard/project/access_and_security/) and source it:
 
 ```
-source example-openrc.sh
+source my-openrc.sh
 ```
 
 Set stack name: `export OS_STACK_NAME=python-stack`
