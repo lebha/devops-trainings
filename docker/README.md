@@ -173,17 +173,22 @@ docker build -t myjenkins -f jenkins_dockerfile .
 docker run -d -p 8080:8080 -p 50000:50000 --name myjenkins -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock myjenkins
 ```
 Use `docker logs myjenkins` to retrieve admin password.
+Access jenkins at `docker-machine ip slave` port 80.
+
+
 ```
 Now you can use docker in containerized jenkins jobs (with sudo)
 ```
 
-Volume mounts are a bit tricky with mounted daemons. The source lookup is done at the host, not inside the container. Example of a working volume mount shell job:
+Volume mounts are a bit tricky with mounted daemons. The source lookup is done at the host, not inside the container. Example:
+
+**Create a freestyle project called 'test'. Add 'execute shell' step:**
 ```
 mkdir -p html
 cat <<'EOF' > html/index.html
 <p>mypage</p>
 EOF
-sudo docker run -d --name mynginx -v /var/lib/docker/volumes/jenkins_home/_data/workspace/docker/html/:/usr/share/nginx/html/:ro -p 80:80 nginx
+sudo docker run -d --name mynginx -v /var/lib/docker/volumes/jenkins_home/_data/workspace/test/html/:/usr/share/nginx/html/:ro -p 80:80 nginx
 ```
 
 Cleanup:
