@@ -122,7 +122,7 @@ docker images
 
 **Removing images:**
 ```
-Docker rmi custom-nginx
+docker rmi custom-nginx
 ```
 
 **Downloading and uploading images:**
