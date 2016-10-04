@@ -172,7 +172,7 @@ Build and run the custom jenkins image:
 docker build -t myjenkins -f jenkins_dockerfile .
 docker run -d -p 8080:8080 -p 50000:50000 --name myjenkins -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock myjenkins
 ```
-Use `docker logs jenkins` to retrieve admin password.
+Use `docker logs myjenkins` to retrieve admin password.
 ```
 Now you can use docker in containerized jenkins jobs (with sudo)
 ```
