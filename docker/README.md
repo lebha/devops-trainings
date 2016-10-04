@@ -128,6 +128,7 @@ docker rmi custom-nginx
 **Downloading and uploading images:**
 ```
 docker pull alpine
+docker tag alpine myname/alpine
 docker push myname/alpine # requires account at dockerhub
 ```
 
