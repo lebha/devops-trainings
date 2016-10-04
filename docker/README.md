@@ -202,13 +202,21 @@ docker volume rm jenkins_home
 
 Docker Compose can be used to launch an entire application of multiple containers at once.
 
-[Docker Compose Instructions](COMPOSE.md)
+[Docker Compose Instructions](docker_compose)
 
+## Docker Swarm
 
-However, the recommended platform for running applications at Elisa is [Kubernetes](http://kubernetes.io/).
+Docker Swarm is a simple container orchestration tool for running containers in a cluster of machines.
 
+[Docker Swarm Instructions](docker_swarm)
+
+## Final Notes
+
+The recommended platform for running applications at Elisa is [Kubernetes](http://kubernetes.io/).
 
 Kubernetes is part of these trainings: [Training Material](../kubernetes).
 For Kubernetes installation and usage, please check out [Elisa SDC Kubernetes Repository](https://github.devcloud.elisa.fi/sdc/kubernetes)
+
+
 
 
