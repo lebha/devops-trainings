@@ -1,4 +1,4 @@
-# Elisa Dvops Trainings
+# Elisa Devops Trainings
 
 ## Training Specific Instructions
 [docker](docker)  
